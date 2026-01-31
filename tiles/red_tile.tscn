@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bonor3uufcigk"]
+
+[ext_resource type="Script" uid="uid://bg4r0b82o1ink" path="res://scripts/colored_tile.gd" id="1_nhbvt"]
+[ext_resource type="Texture2D" uid="uid://ooxokac6syxm" path="res://sprites/colored_tile.png" id="2_nhbvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciq17"]
+size = Vector2(16, 16)
+
+[node name="BaseTile" type="Node2D" unique_id=112987381 node_paths=PackedStringArray("collider") groups=["red_tile"]]
+script = ExtResource("1_nhbvt")
+collider = NodePath("RigidBody2D/CollisionShape2D")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=390256005]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1568396562]
+shape = SubResource("RectangleShape2D_ciq17")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=923241074]
+modulate = Color(1, 0.33999997, 0.33999997, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nhbvt")
+
+[connection signal="tree_exited" from="." to="." method="deactivate"]

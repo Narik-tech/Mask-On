@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bconyydq6monp"]
+
+[ext_resource type="Script" uid="uid://cxi114u6h0u6" path="res://scripts/color_mask.gd" id="1_ksu3f"]
+[ext_resource type="Texture2D" uid="uid://kk028tfi3kjc" path="res://sprites/red_mask.png" id="1_mmaeo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ksu3f"]
+radius = 29.0
+
+[node name="RedMask" type="Area2D" unique_id=1483589948 groups=["player"]]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_ksu3f")
+tile_group = "red_tile"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660643196]
+texture = ExtResource("1_mmaeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1424085768]
+shape = SubResource("CircleShape2D_ksu3f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="tree_exiting" from="." to="." method="deactivate_mask"]

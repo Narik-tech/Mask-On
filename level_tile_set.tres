@@ -1,0 +1,23 @@
+[gd_resource type="TileSet" format=3 uid="uid://bi5lh16bnyaj"]
+
+[ext_resource type="PackedScene" uid="uid://bonor3uufcigk" path="res://tiles/red_tile.tscn" id="1_fuj6f"]
+[ext_resource type="PackedScene" uid="uid://chns17uv2kd3d" path="res://tiles/base_tile.tscn" id="2_e86qm"]
+[ext_resource type="PackedScene" uid="uid://bconyydq6monp" path="res://tiles/masks/red_mask.tscn" id="3_55ool"]
+[ext_resource type="PackedScene" uid="uid://brcp25qwqtmc5" path="res://player/player.tscn" id="4_0wvfi"]
+[ext_resource type="PackedScene" uid="uid://c2fvbhgi000o3" path="res://tiles/blue_tile.tscn" id="5_nh76q"]
+[ext_resource type="PackedScene" uid="uid://dkmd8tq6cnx6l" path="res://tiles/finish.tscn" id="6_ytvxx"]
+[ext_resource type="PackedScene" uid="uid://bsw7h62qud20e" path="res://tiles/masks/blue_mask.tscn" id="7_u4j7t"]
+[ext_resource type="PackedScene" uid="uid://cmg2ojjshkvlu" path="res://tiles/sand.tscn" id="8_e86qm"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jirdo"]
+scenes/1/scene = ExtResource("1_fuj6f")
+scenes/2/scene = ExtResource("2_e86qm")
+scenes/3/scene = ExtResource("3_55ool")
+scenes/4/scene = ExtResource("4_0wvfi")
+scenes/5/scene = ExtResource("5_nh76q")
+scenes/6/scene = ExtResource("6_ytvxx")
+scenes/7/scene = ExtResource("7_u4j7t")
+scenes/8/scene = ExtResource("8_e86qm")
+
+[resource]
+sources/1 = SubResource("TileSetScenesCollectionSource_jirdo")

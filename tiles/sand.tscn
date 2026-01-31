@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://chns17uv2kd3d"]
+[gd_scene format=3 uid="uid://cmg2ojjshkvlu"]
 
-[ext_resource type="Texture2D" uid="uid://ovfp0roec3mu" path="res://sprites/wall.png" id="1_ciq17"]
+[ext_resource type="Texture2D" uid="uid://d2wuacrsgmm7n" path="res://sprites/sand.png" id="1_50ifn"]
+[ext_resource type="Script" uid="uid://4p8jh55untrm" path="res://tiles/freeze_during_rotation.gd" id="1_ajprl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciq17"]
 size = Vector2(16, 16)
@@ -9,10 +10,11 @@ size = Vector2(16, 16)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=390256005]
 freeze = true
+script = ExtResource("1_ajprl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1568396562]
 shape = SubResource("RectangleShape2D_ciq17")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=923241074]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_ciq17")
+texture = ExtResource("1_50ifn")

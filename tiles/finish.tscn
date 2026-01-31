@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dkmd8tq6cnx6l"]
+
+[ext_resource type="Script" uid="uid://bdfnx6ykooh15" path="res://scripts/finish.gd" id="1_aa4aj"]
+[ext_resource type="Texture2D" uid="uid://r1bgctsmdtu8" path="res://sprites/finish_flag.png" id="2_aa4aj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ksu3f"]
+radius = 29.0
+
+[node name="RedMask" type="Area2D" unique_id=1483589948 groups=["player"]]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_aa4aj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=660643196]
+texture = ExtResource("2_aa4aj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1424085768]
+shape = SubResource("CircleShape2D_ksu3f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="tree_exited" from="." to="." method="deactivate_mask"]

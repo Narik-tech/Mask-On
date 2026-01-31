@@ -1,0 +1,24 @@
+[gd_scene format=4 uid="uid://c0ddwxce2p7h8"]
+
+[ext_resource type="PackedScene" uid="uid://chns17uv2kd3d" path="res://tiles/base_tile.tscn" id="1_vn7o3"]
+[ext_resource type="PackedScene" uid="uid://brcp25qwqtmc5" path="res://player.tscn" id="3_bt44k"]
+[ext_resource type="PackedScene" uid="uid://bconyydq6monp" path="res://masks/colored_mask.tscn" id="3_kx6l7"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jirdo"]
+scenes/2/scene = ExtResource("1_vn7o3")
+
+[sub_resource type="TileSet" id="TileSet_bt44k"]
+sources/1 = SubResource("TileSetScenesCollectionSource_jirdo")
+
+[node name="level_1" type="Node2D" unique_id=496029869]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=24553224]
+position = Vector2(446, 362)
+tile_map_data = PackedByteArray("AAD+/wcAAQAAAAAAAgAHAAcAAQAAAAAAAgAGAAcAAQAAAAAAAgAFAAcAAQAAAAAAAgAEAAcAAQAAAAAAAgADAAcAAQAAAAAAAgACAAcAAQAAAAAAAgABAAcAAQAAAAAAAgAAAAcAAQAAAAAAAgD//wcAAQAAAAAAAgD9/wcAAQAAAAAAAgD8/wcAAQAAAAAAAgD7/wcAAQAAAAAAAgD6/wcAAQAAAAAAAgD5/wcAAQAAAAAAAgD5/wYAAQAAAAAAAgD5/wUAAQAAAAAAAgD5/wQAAQAAAAAAAgD5/wMAAQAAAAAAAgD5/wIAAQAAAAAAAgD5/wEAAQAAAAAAAgD5/wAAAQAAAAAAAgD5////AQAAAAAAAgD5//7/AQAAAAAAAgD5//3/AQAAAAAAAgAKAP3/AQAAAAAAAgD6//3/AQAAAAAAAgAJAP3/AQAAAAAAAgD7//3/AQAAAAAAAgD8//3/AQAAAAAAAgD9//3/AQAAAAAAAgD+//3/AQAAAAAAAgD///3/AQAAAAAAAgAAAP3/AQAAAAAAAgABAP3/AQAAAAAAAgACAP3/AQAAAAAAAgADAP3/AQAAAAAAAgAEAP3/AQAAAAAAAgAFAP3/AQAAAAAAAgAGAP3/AQAAAAAAAgAHAP3/AQAAAAAAAgAIAP3/AQAAAAAAAgAKAP7/AQAAAAAAAgAKAP//AQAAAAAAAgAKAAAAAQAAAAAAAgAKAAEAAQAAAAAAAgAKAAIAAQAAAAAAAgAKAAMAAQAAAAAAAgAKAAQAAQAAAAAAAgAKAAUAAQAAAAAAAgAKAAYAAQAAAAAAAgAKAAcAAQAAAAAAAgAJAAcAAQAAAAAAAgAIAAcAAQAAAAAAAgA=")
+tile_set = SubResource("TileSet_bt44k")
+
+[node name="Player" parent="." unique_id=1342853925 instance=ExtResource("3_bt44k")]
+position = Vector2(365, 451)
+
+[node name="ColoredMask" parent="." unique_id=1483589948 instance=ExtResource("3_kx6l7")]
+position = Vector2(477, 456)

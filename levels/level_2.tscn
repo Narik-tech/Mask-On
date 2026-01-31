@@ -1,0 +1,54 @@
+[gd_scene format=4 uid="uid://baupitdx1pb0c"]
+
+[ext_resource type="Script" uid="uid://b70hftc1d7gik" path="res://scripts/level.gd" id="1_ep78u"]
+[ext_resource type="TileSet" uid="uid://bi5lh16bnyaj" path="res://level_tile_set.tres" id="2_0srwa"]
+[ext_resource type="PackedScene" uid="uid://ds8mh5q5crb11" path="res://level_ui.tscn" id="4_v5uil"]
+[ext_resource type="PackedScene" uid="uid://wg584hq6h6fd" path="res://tiles/masks/gravity_mask.tscn" id="6_ilhis"]
+
+[node name="level_2" type="Node2D" unique_id=496029869 groups=["level"]]
+script = ExtResource("1_ep78u")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=24553224]
+position = Vector2(446, 362)
+tile_map_data = PackedByteArray("AAD+/wcAAQAAAAAAAgAHAAcAAQAAAAAAAgAGAAcAAQAAAAAAAgAFAAcAAQAAAAAAAgAEAAcAAQAAAAAAAgADAAcAAQAAAAAAAgACAAcAAQAAAAAAAgABAAcAAQAAAAAAAgAAAAcAAQAAAAAAAgD//wcAAQAAAAAAAgD9/wcAAQAAAAAAAgD8/wcAAQAAAAAAAgD7/wcAAQAAAAAAAgD6/wcAAQAAAAAAAgD5/wcAAQAAAAAAAgD5//3/AQAAAAAAAgD6//3/AQAAAAAAAgD7//3/AQAAAAAAAgD8//3/AQAAAAAAAgD9//3/AQAAAAAAAgAKAAcAAQAAAAAAAgAJAAcAAQAAAAAAAgAIAAcAAQAAAAAAAgD8/wIAAQAAAAAAAgD8/wEAAQAAAAAAAgD8/wAAAQAAAAAAAgD8////AQAAAAAAAgD8//7/AQAAAAAAAgD8/wQAAQAAAAAACAD8/wYAAQAAAAAACAD4/wcAAQAAAAAAAgD4/wMAAQAAAAAAAgD4/wIAAQAAAAAAAgD4//7/AQAAAAAAAgD4////AQAAAAAAAgD4/wAAAQAAAAAAAgD4/wEAAQAAAAAAAgD4//3/AQAAAAAAAgABAAIAAQAAAAAAAgD9/wIAAQAAAAAAAQD+/wIAAQAAAAAAAQD//wIAAQAAAAAAAQD7/wUAAQAAAAAACAD7/wYAAQAAAAAACAACAAIAAQAAAAAAAQADAAIAAQAAAAAAAQAEAAIAAQAAAAAAAQAEAAMAAQAAAAAAAQAEAAQAAQAAAAAAAQAFAAQAAQAAAAAAAQAGAAQAAQAAAAAAAQAHAAQAAQAAAAAAAQAHAAUAAQAAAAAAAQAHAAYAAQAAAAAAAQAJAAYAAQAAAAAAAwALAAcAAQAAAAAAAgALAP3/AQAAAAAAAgAKAP3/AQAAAAAAAgAJAP3/AQAAAAAAAgAIAP3/AQAAAAAAAgAHAP3/AQAAAAAAAgAGAP3/AQAAAAAAAgAFAP3/AQAAAAAAAgAEAP3/AQAAAAAAAgADAP3/AQAAAAAAAgACAP3/AQAAAAAAAgABAP3/AQAAAAAAAgAAAP3/AQAAAAAAAgD///3/AQAAAAAAAgD+//3/AQAAAAAAAgD+/wMAAQAAAAAABQD7////AQAAAAAABgD6/wYAAQAAAAAACAD8/wUAAQAAAAAACAACAAMAAQAAAAAABQADAAMAAQAAAAAABQAIAAUAAQAAAAAABQAJAAUAAQAAAAAABQAGAAMAAQAAAAAABQAFAAMAAQAAAAAABQADAAYAAQAAAAAABAABAAMAAQAAAAAAAgD8/wMAAQAAAAAAAgABAAEAAQAAAAAAAgAAAAEAAQAAAAAAAQD//wEAAQAAAAAAAQABAAAAAQAAAAAAAgD5/wYAAQAAAAAACAD6/wUAAQAAAAAACAD7/wQAAQAAAAAACAAAAAMAAQAAAAAABwAAAAIAAQAAAAAAAQD+/wEAAQAAAAAAAQD9/wEAAQAAAAAAAQD+/wYAAQAAAAAABQD+/wUAAQAAAAAABQD+/wQAAQAAAAAABQD4/wYAAQAAAAAACAD4/wUAAQAAAAAACAD3/wUAAQAAAAAACAD3/wQAAQAAAAAACAD2/wUAAQAAAAAACAD2/wYAAQAAAAAACAD1/wYAAQAAAAAACAD0/wYAAQAAAAAACAD0/wUAAQAAAAAACAD0/wQAAQAAAAAACAD1/wQAAQAAAAAACAD2/wQAAQAAAAAACAD4/wQAAQAAAAAACAD5/wQAAQAAAAAACAD6/wQAAQAAAAAACAD5/wUAAQAAAAAACAD3/wYAAQAAAAAACAD1/wUAAQAAAAAACAD3/wcAAQAAAAAAAgD2/wcAAQAAAAAAAgD1/wcAAQAAAAAAAgD0/wcAAQAAAAAAAgDz/wcAAQAAAAAAAgDz/wYAAQAAAAAACADz/wUAAQAAAAAACADz/wQAAQAAAAAACADz/wMAAQAAAAAAAgD0/wMAAQAAAAAAAgD1/wMAAQAAAAAAAgD2/wMAAQAAAAAAAgD3/wMAAQAAAAAAAgD7/wAAAQAAAAAAAgAMAAcAAQAAAAAAAgANAAcAAQAAAAAAAgAOAAcAAQAAAAAAAgAPAAcAAQAAAAAAAgAPAAYAAQAAAAAAAgAPAAUAAQAAAAAAAgAPAAQAAQAAAAAAAgAPAAMAAQAAAAAAAgAPAAIAAQAAAAAAAgAOAP3/AQAAAAAAAgAPAP3/AQAAAAAAAgAPAP7/AQAAAAAAAgAPAP//AQAAAAAAAgAPAAAAAQAAAAAAAgAPAAEAAQAAAAAAAgANAP3/AQAAAAAAAgAMAP3/AQAAAAAAAgDy/wcAAQAAAAAAAgDx/wcAAQAAAAAAAgDw/wcAAQAAAAAAAgDv/wcAAQAAAAAAAgDu/wcAAQAAAAAAAgDu/wYAAQAAAAAAAgDu/wUAAQAAAAAAAgDu/wQAAQAAAAAAAgDu/wMAAQAAAAAAAgDv/wMAAQAAAAAAAgDw/wMAAQAAAAAAAgDx/wMAAQAAAAAAAgDy/wMAAQAAAAAAAgDy/wYAAQAAAAAACADx/wYAAQAAAAAACADw/wYAAQAAAAAACADv/wYAAQAAAAAACADv/wUAAQAAAAAACADv/wQAAQAAAAAACADw/wQAAQAAAAAACADx/wQAAQAAAAAACADy/wQAAQAAAAAACADy/wUAAQAAAAAACADx/wUAAQAAAAAACADw/wUAAQAAAAAACAA=")
+tile_set = ExtResource("2_0srwa")
+
+[node name="GravityMask" parent="." unique_id=1483589948 instance=ExtResource("6_ilhis")]
+position = Vector2(408, 368)
+
+[node name="LevelUi" parent="." unique_id=2128359847 instance=ExtResource("4_v5uil")]
+
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80697" to="TileMapLayer/@Node2D@80697" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80698" to="TileMapLayer/@Node2D@80698" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80699" to="TileMapLayer/@Node2D@80699" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80702" to="TileMapLayer/@Node2D@80702" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80703" to="TileMapLayer/@Node2D@80703" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80704" to="TileMapLayer/@Node2D@80704" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80705" to="TileMapLayer/@Node2D@80705" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80706" to="TileMapLayer/@Node2D@80706" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80707" to="TileMapLayer/@Node2D@80707" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80708" to="TileMapLayer/@Node2D@80708" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80709" to="TileMapLayer/@Node2D@80709" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80710" to="TileMapLayer/@Node2D@80710" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80711" to="TileMapLayer/@Node2D@80711" method="deactivate"]
+[connection signal="body_entered" from="TileMapLayer/RedMask" to="TileMapLayer/RedMask" method="_on_body_entered"]
+[connection signal="tree_exiting" from="TileMapLayer/RedMask" to="TileMapLayer/RedMask" method="deactivate_mask"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80736" to="TileMapLayer/@Node2D@80736" method="deactivate"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@80737" to="TileMapLayer/@Area2D@80737" method="_on_body_entered"]
+[connection signal="tree_exited" from="TileMapLayer/@Area2D@80737" to="TileMapLayer/@Area2D@80737" method="deactivate_mask"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80740" to="TileMapLayer/@Node2D@80740" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80741" to="TileMapLayer/@Node2D@80741" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80742" to="TileMapLayer/@Node2D@80742" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80743" to="TileMapLayer/@Node2D@80743" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80744" to="TileMapLayer/@Node2D@80744" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80745" to="TileMapLayer/@Node2D@80745" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80749" to="TileMapLayer/@Node2D@80749" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80750" to="TileMapLayer/@Node2D@80750" method="deactivate"]
+[connection signal="body_entered" from="TileMapLayer/BlueMask" to="TileMapLayer/BlueMask" method="_on_body_entered"]
+[connection signal="tree_exiting" from="TileMapLayer/BlueMask" to="TileMapLayer/BlueMask" method="deactivate_mask"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80755" to="TileMapLayer/@Node2D@80755" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80756" to="TileMapLayer/@Node2D@80756" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80757" to="TileMapLayer/@Node2D@80757" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80758" to="TileMapLayer/@Node2D@80758" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80759" to="TileMapLayer/@Node2D@80759" method="deactivate"]
+[connection signal="tree_exited" from="TileMapLayer/@Node2D@80760" to="TileMapLayer/@Node2D@80760" method="deactivate"]
