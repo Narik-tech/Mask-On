@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chns17uv2kd3d"]
+
+[ext_resource type="Texture2D" uid="uid://ovfp0roec3mu" path="res://sprites/wall.png" id="1_ciq17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciq17"]
+size = Vector2(16, 16)
+
+[node name="BaseTile" type="Node2D" unique_id=112987381]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=923241074]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ciq17")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=390256005]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1568396562]
+shape = SubResource("RectangleShape2D_ciq17")
