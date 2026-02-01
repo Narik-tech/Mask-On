@@ -4,7 +4,10 @@ signal game_win()
 
 @export var levels := [
 	"res://levels/level_1.tscn",
+	"res://levels/level_1_1.tscn",
+	"res://levels/level_1_2.tscn",
 	"res://levels/level_2.tscn",
+	"res://levels/level_2_1.tscn",
 	"res://levels/level_3.tscn",
 ]
 var current_level_index := 0

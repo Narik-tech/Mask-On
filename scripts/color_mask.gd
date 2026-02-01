@@ -21,7 +21,6 @@ func activate_mask():
 		tile.activate()
 
 func deactivate_mask():
-	SoundManager.slide()
 	if not is_inside_tree(): return
 	for tile in get_tree().get_nodes_in_group(tile_group):
 		tile.deactivate()

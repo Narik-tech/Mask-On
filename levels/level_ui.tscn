@@ -9,6 +9,7 @@
 [node name="LevelUi" type="CanvasLayer" unique_id=1056345444]
 
 [node name="PauseMenu" type="Control" parent="." unique_id=803303980 node_paths=PackedStringArray("resume_button")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
