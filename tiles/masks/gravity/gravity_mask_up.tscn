@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c1k3vg5wnj42m"]
+
+[ext_resource type="PackedScene" uid="uid://wg584hq6h6fd" path="res://tiles/masks/gravity/gravity_mask_down.tscn" id="1_taflu"]
+
+[node name="GravityMaskRight" type="Node2D" unique_id=620777404]
+
+[node name="GravityMask" parent="." unique_id=1483589948 instance=ExtResource("1_taflu")]
+rotation_amount = 180

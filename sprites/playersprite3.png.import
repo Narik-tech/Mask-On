@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r6lcvm1xw4xi"
-path="res://.godot/imported/down_gravity_arrow.png-1183366005d3eb17218741b83b773408.ctex"
+uid="uid://cj2jc616dtfo8"
+path="res://.godot/imported/playersprite3.png-4cc16ca0f18905501930d38da0b3e5f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/down_gravity_arrow.png"
-dest_files=["res://.godot/imported/down_gravity_arrow.png-1183366005d3eb17218741b83b773408.ctex"]
+source_file="res://sprites/playersprite3.png"
+dest_files=["res://.godot/imported/playersprite3.png-4cc16ca0f18905501930d38da0b3e5f5.ctex"]
 
 [params]
 

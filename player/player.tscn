@@ -2,21 +2,44 @@
 
 [ext_resource type="Script" uid="uid://cq78iing5u16f" path="res://scripts/player/player.gd" id="1_rihsh"]
 [ext_resource type="Script" uid="uid://84wuxrepq3ac" path="res://scripts/player/player_camera.gd" id="2_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://cwxrogmdkaq6i" path="res://sprites/square_player.png" id="2_yw30f"]
+[ext_resource type="Texture2D" uid="uid://bjjxfdcj5dlud" path="res://sprites/playersprite1.png" id="2_yw30f"]
 [ext_resource type="Script" uid="uid://bcpvavnh0kx38" path="res://scripts/player/player_sprite.gd" id="3_hqtel"]
+[ext_resource type="Texture2D" uid="uid://yk4kwfrichfh" path="res://sprites/playersprite2.png" id="5_g6k8r"]
+[ext_resource type="Texture2D" uid="uid://cj2jc616dtfo8" path="res://sprites/playersprite3.png" id="6_boad6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rihsh"]
-radius = 7.5
+radius = 2.0
 height = 15.5
 
-[node name="Player" type="CharacterBody2D" unique_id=1342853925 node_paths=PackedStringArray("mask_transform") groups=["player"]]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rgyib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yw30f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yw30f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g6k8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_boad6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1342853925 node_paths=PackedStringArray("mask_transform", "animated_sprite") groups=["player"]]
 script = ExtResource("1_rihsh")
 mask_transform = NodePath("MaskTransform")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1933534548]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_yw30f")
-script = ExtResource("3_hqtel")
+animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1434041545]
 shape = SubResource("CapsuleShape2D_rihsh")
@@ -27,5 +50,11 @@ zoom = Vector2(5.35, 5.35)
 script = ExtResource("2_i3pqv")
 
 [node name="MaskTransform" type="Node2D" parent="." unique_id=1701354070]
-position = Vector2(0, -4.53)
-scale = Vector2(0.17, 0.17)
+position = Vector2(0, -5.675)
+scale = Vector2(0.08, 0.08)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=569534105]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_rgyib")
+animation = &"idle"
+script = ExtResource("3_hqtel")

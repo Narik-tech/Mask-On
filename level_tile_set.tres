@@ -2,12 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://bonor3uufcigk" path="res://tiles/red_tile.tscn" id="1_fuj6f"]
 [ext_resource type="PackedScene" uid="uid://chns17uv2kd3d" path="res://tiles/base_tile.tscn" id="2_e86qm"]
+[ext_resource type="PackedScene" uid="uid://dwom8vnnopii0" path="res://tiles/masks/gravity/gravity_mask_left.tscn" id="2_ytvxx"]
 [ext_resource type="PackedScene" uid="uid://bconyydq6monp" path="res://tiles/masks/red_mask.tscn" id="3_55ool"]
+[ext_resource type="PackedScene" uid="uid://thgf7pg2mfy2" path="res://tiles/masks/gravity/gravity_mask_right.tscn" id="3_u4j7t"]
 [ext_resource type="PackedScene" uid="uid://brcp25qwqtmc5" path="res://player/player.tscn" id="4_0wvfi"]
+[ext_resource type="PackedScene" uid="uid://c1k3vg5wnj42m" path="res://tiles/masks/gravity/gravity_mask_up.tscn" id="4_7esy1"]
 [ext_resource type="PackedScene" uid="uid://c2fvbhgi000o3" path="res://tiles/blue_tile.tscn" id="5_nh76q"]
 [ext_resource type="PackedScene" uid="uid://dkmd8tq6cnx6l" path="res://tiles/finish.tscn" id="6_ytvxx"]
 [ext_resource type="PackedScene" uid="uid://bsw7h62qud20e" path="res://tiles/masks/blue_mask.tscn" id="7_u4j7t"]
 [ext_resource type="PackedScene" uid="uid://cmg2ojjshkvlu" path="res://tiles/sand.tscn" id="8_e86qm"]
+[ext_resource type="PackedScene" uid="uid://wg584hq6h6fd" path="res://tiles/masks/gravity/gravity_mask_down.tscn" id="12_hwcqi"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jirdo"]
 scenes/1/scene = ExtResource("1_fuj6f")
@@ -18,6 +22,10 @@ scenes/5/scene = ExtResource("5_nh76q")
 scenes/6/scene = ExtResource("6_ytvxx")
 scenes/7/scene = ExtResource("7_u4j7t")
 scenes/8/scene = ExtResource("8_e86qm")
+scenes/9/scene = ExtResource("12_hwcqi")
+scenes/10/scene = ExtResource("2_ytvxx")
+scenes/11/scene = ExtResource("3_u4j7t")
+scenes/12/scene = ExtResource("4_7esy1")
 
 [resource]
 sources/1 = SubResource("TileSetScenesCollectionSource_jirdo")

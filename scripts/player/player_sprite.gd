@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 func _process(_delta):
 	global_rotation = 0

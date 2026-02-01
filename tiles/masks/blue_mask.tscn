@@ -12,6 +12,7 @@ script = ExtResource("1_j1ebk")
 tile_group = "blue_tile"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=660643196]
+scale = Vector2(4, 4)
 texture = ExtResource("2_j1ebk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1424085768]
