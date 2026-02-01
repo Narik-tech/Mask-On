@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
+		SoundManager.jump()
 
 	# Horizontal movement
 	var direction := Input.get_axis("move_left", "move_right")

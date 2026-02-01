@@ -14,12 +14,14 @@ func collide_with_player(player: Node):
 	activate_mask()
 
 func activate_mask():
+	SoundManager.slide()
 	mask_activated = true
 	if get_tree() == null: return
 	for tile in get_tree().get_nodes_in_group(tile_group):
 		tile.activate()
 
 func deactivate_mask():
+	SoundManager.slide()
 	if not is_inside_tree(): return
 	for tile in get_tree().get_nodes_in_group(tile_group):
 		tile.deactivate()

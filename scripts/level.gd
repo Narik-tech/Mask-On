@@ -8,6 +8,7 @@ var rotation_target: int = 0
 var is_rotating: bool = false
 func set_rotation_target(degrees: int):
 	start_rotation.emit()
+	SoundManager.woosh()
 	is_rotating = true
 	if abs(degrees) > 180:
 		rotation_target = (-degrees + 180) %360
