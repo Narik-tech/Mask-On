@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ds8mh5q5crb11"]
+
+[ext_resource type="Script" uid="uid://2dp1a3giwvg6" path="res://scripts/ui/reset_scene.gd" id="1_ktgpk"]
+[ext_resource type="Script" uid="uid://db0dh5oitdqps" path="res://scripts/ui/pause_menu.gd" id="2_pn66h"]
+[ext_resource type="PackedScene" uid="uid://bxpspvo1d4w56" path="res://main.tscn" id="3_ggnqm"]
+[ext_resource type="Script" uid="uid://de7camkb81qg" path="res://scripts/ui/win_screen.gd" id="4_fiuri"]
+[ext_resource type="Script" uid="uid://dii7nr5orfbo3" path="res://scripts/ui/quit_to_desktop.gd" id="4_kuktd"]
+
+[node name="LevelUi" type="CanvasLayer" unique_id=1056345444]
+
+[node name="PauseMenu" type="Control" parent="." unique_id=803303980 node_paths=PackedStringArray("resume_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_pn66h")
+main_menu_scene = ExtResource("3_ggnqm")
+resume_button = NodePath("VBoxContainer/Resume")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=2091408142]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.6154263, 0.90937066, 0.90937066, 0.41568628)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=1506422256]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 372.0
+offset_right = 523.0
+offset_bottom = 714.0
+theme_override_constants/separation = 37
+
+[node name="Resume" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1590670337]
+layout_mode = 2
+text = "RESUME
+"
+
+[node name="Reset" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1667791054]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "RESET
+"
+script = ExtResource("1_ktgpk")
+
+[node name="Main Menu" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1994951901]
+layout_mode = 2
+text = "MAIN MENU
+"
+
+[node name="Quit To Desktop" type="Button" parent="PauseMenu/VBoxContainer" unique_id=349444370]
+layout_mode = 2
+text = "QUIT TO DESKTOP"
+script = ExtResource("4_kuktd")
+
+[node name="Win Screen" type="Control" parent="." unique_id=2086966444 node_paths=PackedStringArray("main_menu_button")]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_fiuri")
+main_menu_scene = ExtResource("3_ggnqm")
+main_menu_button = NodePath("Main Menu")
+
+[node name="ColorRect" type="ColorRect" parent="Win Screen" unique_id=1115632446]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.6156863, 0.9098039, 0.5529412, 0.41568628)
+
+[node name="Main Menu" type="Button" parent="Win Screen" unique_id=531299878]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 658.0
+offset_right = 350.0
+offset_bottom = 714.0
+text = "MAIN MENU
+"
+
+[node name="WIN!" type="Label" parent="Win Screen" unique_id=1719995683]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 437.0
+offset_right = 1245.0
+offset_bottom = 566.0
+theme_override_font_sizes/font_size = 103
+text = "YOU WIN !!!"
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Main Menu" to="PauseMenu" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Win Screen/Main Menu" to="Win Screen" method="_on_main_menu_button_pressed"]

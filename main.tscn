@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bxpspvo1d4w56"]
+
+[ext_resource type="Texture2D" uid="uid://dvdr0mbq2k7m7" path="res://sprites/mask-on logo.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cggrfvni2r77n" path="res://scripts/ui/controls.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://b6fh6x5i0tg2y" path="res://scripts/ui/play_button.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dii7nr5orfbo3" path="res://scripts/ui/quit_to_desktop.gd" id="4_1bvp3"]
+
+[node name="Main" type="Control" unique_id=1606884960]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_behavior_recursive = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=82100130]
+
+[node name="LOGO" type="TextureRect" parent="CanvasLayer" unique_id=1211496922]
+offset_left = 93.0
+offset_right = 1817.0
+offset_bottom = 862.0
+texture = ExtResource("1_ig7tw")
+
+[node name="Play" type="Button" parent="CanvasLayer" unique_id=926314657]
+offset_left = 817.0
+offset_top = 738.0
+offset_right = 1069.0
+offset_bottom = 802.0
+focus_neighbor_bottom = NodePath("../Quit To Desktop")
+text = "PLAY"
+script = ExtResource("2_h2yge")
+
+[node name="Controls" type="Label" parent="CanvasLayer" unique_id=728716683]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 89.0
+offset_top = -389.0
+offset_right = 370.27075
+offset_bottom = -154.55176
+grow_vertical = 0
+scale = Vector2(2.0323894, 2.0323894)
+text = "lorem epsum etcasdsa
+asdsadsadas
+asddsads
+asdsaads"
+script = ExtResource("2_0xm2m")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=941795334]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -410.0
+offset_top = -90.0
+offset_right = -27.688843
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5279295, 1.5279295)
+text = "Game by Kiran Meyers
+Textures by Angel Crespo"
+
+[node name="Quit To Desktop" type="Button" parent="CanvasLayer" unique_id=115501605]
+offset_left = 721.0
+offset_top = 872.0
+offset_right = 1190.0
+offset_bottom = 928.0
+focus_neighbor_top = NodePath("../Play")
+text = "QUIT TO DESKTOP"
+script = ExtResource("4_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1344047173]
+offset_right = 40.0
+offset_bottom = 40.0

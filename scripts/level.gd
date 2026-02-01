@@ -11,7 +11,6 @@ func set_rotation_target(degrees: int):
 	is_rotating = true
 	if abs(degrees) > 180:
 		rotation_target = (-degrees + 180) %360
-		print_debug(rotation_target)
 	else:
 		rotation_target = degrees
 	
@@ -20,7 +19,6 @@ func _process(delta: float) -> void:
 	if not is_rotating: return
 	var diff = roundi(rotation_target - global_rotation_degrees) %360
 	if abs(diff) > 3:
-		print_debug(diff)
 		global_rotation = lerp_angle(global_rotation, float(deg_to_rad(rotation_target)), delta * 10)
 	else:
 		global_rotation_degrees = rotation_target

@@ -6,6 +6,7 @@
 size = Vector2(16, 16)
 
 [node name="BaseTile" type="Node2D" unique_id=112987381]
+modulate = Color(0.8, 0.72156864, 0.8235294, 1)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=390256005]
 freeze = true
